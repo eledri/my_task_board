@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Tasks Board</title>
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap core -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- FontAwesome Kit -->
+    <script
+      src="https://kit.fontawesome.com/5514794423.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navbar header -->
+    <header>
+      <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand"
+          ><i class="fas fa-tasks fontIcons"></i> My Tasks
+        </span>
+        <div id="todayDate" class="todayDate"></div>
+      </nav>
+    </header>
+
+    <!-- main container -->
+    <main>
+      <p class="copyRights badge badge-dark d-none d-lg-block">
+        Created By Elad Edri 2020 &copy;
+      </p>
+      <div class="container mainContent">
+        <div class="col">
+          <h1 class="header">My Tasks Board</h1>
+          <br />
+          <div id="TaskContainer" class="newTaskForm">
+            <form
+              class="addNewTaskForm col-md-12v col-sm-12 col-lg-8"
+              action=""
+              id="taskForm"
+            >
+              <textarea
+                placeholder="Enter Task Details:"
+                name="taskDetails"
+                id="taskDetailsBox"
+                cols="10"
+                rows="10"
+                class="taskDetailsBox form-control"
+              ></textarea>
+
+              <div class="inputContainer">
+                <div>
+                  <input
+                    placeholder="Enter Due Date"
+                    type="text"
+                    class="form-control taskDateBox"
+                    name="taskDate"
+                    id="taskDateBox"
+                    onfocus="(this.type='date')"
+                  />
+                </div>
+
+                <div>
+                  <input
+                    placeholder="Enter Target Time"
+                    type="text"
+                    class="form-control taskTimeBox"
+                    name="taskTime"
+                    id="taskTimeBox"
+                    onfocus="(this.type='time')"
+                  />
+                </div>
+              </div>
+              <div class="buttonGroup">
+                <button
+                  type="button"
+                  onclick="return validateForm()"
+                  class="btn btn-success"
+                >
+                  <i class="fas fa-plus"></i>Add Task
+                </button>
+                <button
+                  id="resetButton"
+                  onclick="resetForm()"
+                  type="button"
+                  class="btn btn-dark"
+                >
+                  <i class="fas fa-trash"></i>Clear Form
+                </button>
+              </div>
+            </form>
+            <br /><br /><br /><br />
+          </div>
+        </div>
+      </div>
+      <div id="stickyNotesContainer"></div>
+    </main>
+  </body>
+</html>

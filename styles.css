@@ -1,0 +1,134 @@
+.fontIcons {
+  color: #fff;
+  font-size: 18px;
+  margin: 10px;
+}
+
+.todayDate {
+  color: #fff;
+}
+
+body {
+  background-image: url("assets/images/tile.jpg");
+}
+
+@font-face {
+  src: url("assets/fonts/font.ttf");
+  font-family: header;
+}
+.header {
+  font-family: header;
+  font-size: 70px;
+  margin-top: 10px;
+  text-align: center;
+}
+.addNewTaskForm {
+  background-image: url("assets/images/formbg.jpg");
+  height: 180px;
+  margin: auto;
+  box-shadow: 1px 1px 10px black;
+}
+.taskDetailsBox {
+  height: 110px !important;
+  background-color: transparent !important ;
+  resize: none;
+  border: none !important;
+  color: black !important;
+  line-height: 2 !important;
+}
+
+.taskDateBox {
+  width: 200px !important;
+  background-color: transparent !important;
+  resize: none;
+  border: none !important;
+  color: black !important;
+  margin-top: -10px;
+  float: left;
+}
+.taskTimeBox {
+  width: 150px !important;
+  background-color: transparent !important;
+  resize: none;
+  border: none !important;
+  margin-top: -10px;
+  color: black !important;
+  float: left;
+}
+
+.inputContainer {
+  margin-top: 8px;
+}
+
+.buttonGroup {
+  margin-top: 70px;
+  float: right;
+}
+i {
+  margin-right: 5px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.stickyNote {
+  background-image: url("assets/images/notebg.png");
+  width: 200px;
+  height: 250px;
+  margin-left: 50px;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.stickyNote:last-of-type {
+  animation: fadeIn 1s;
+}
+
+.stickyText {
+  background-color: transparent !important;
+  border: 0px;
+  height: 140px;
+  margin-left: 10px;
+  resize: none;
+}
+
+.deleteTask {
+  font-size: 28px;
+  float: right;
+  margin-right: 28px;
+  margin-top: 22px;
+  visibility: hidden;
+}
+.dateTimePar {
+  color: #546e7a;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.disable-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.noTaskAlertContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+.noTaskAlert {
+  display: inline-block;
+  width: 37%;
+}
+
+.copyRights {
+  font-size: 12px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
